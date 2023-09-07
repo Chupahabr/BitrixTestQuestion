@@ -1,0 +1,9 @@
+.idea
+.vscode
+.fleet
+logs
+.env
+
+www/bitrix
+www/upload
+www/.htaccess
