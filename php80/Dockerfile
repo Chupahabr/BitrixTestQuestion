@@ -14,7 +14,12 @@ RUN apt-get update \
     php8.0-opcache \
     php8.0-zip \
     php-pear php8.0-dev libmcrypt-dev gcc make autoconf libc-dev pkg-config \
-    && pecl install mcrypt-1.0.4 \
+    webp \
+    msmtp \
+    msmtp-mta \
+    sudo \
+    cron \
+    && pecl install mcrypt-1.0.6 \
     && apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
 
 COPY ./php.ini /etc/php/8.0/fpm/conf.d/90-php.ini

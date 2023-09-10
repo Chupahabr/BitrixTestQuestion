@@ -11,6 +11,8 @@ services:
   php:
     build: ./${PHP_VERSION}
     container_name: php
+    volumes:
+      - ./private/msmtprc:/etc/msmtprc
     volumes_from:
       - source
     links:
@@ -31,8 +33,8 @@ services:
     volumes_from:
       - source
     ports:
-      - '${INTERFACE}:80:80'
-      - '${INTERFACE}:443:443'
+      - '${INTERFACE}:81:80'
+      - '${INTERFACE}:442:443'
     links:
       - php
     networks:
